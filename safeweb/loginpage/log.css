@@ -1,0 +1,594 @@
+/* =========================
+   ROOT COLOURS
+========================= */
+
+:root {
+
+    --cream-white: #fffdf7;
+    --red: #E00712;
+    --green: #007330;
+    --grey: #555555;
+    --yellow: #FDDB03;
+
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: var(--cream-white);
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--grey);
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: white;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.welcome-section {
+
+    position: relative;
+
+    padding: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(0, 115, 48, 0.96),
+            rgba(0, 115, 48, 0.88)
+        );
+
+}
+
+
+/* Decorative red shape */
+
+.welcome-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    background: var(--red);
+
+    border-radius: 50%;
+
+    top: -120px;
+
+    right: -100px;
+
+    opacity: 0.8;
+
+}
+
+
+/* Decorative yellow shape */
+
+.welcome-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    background: var(--yellow);
+
+    border-radius: 50%;
+
+    bottom: -90px;
+
+    left: -70px;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 60px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    z-index: 2;
+
+}
+
+.logo span {
+
+    color: var(--yellow);
+
+}
+
+
+/* =========================
+   WELCOME TEXT
+========================= */
+
+.welcome-section h1 {
+
+    font-size: 42px;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+#animated-text {
+
+    color: var(--yellow);
+
+    display: block;
+
+    min-height: 60px;
+
+}
+
+
+/* Paragraph */
+
+.welcome-section p {
+
+    max-width: 430px;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+    opacity: 0.9;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* Line */
+
+.welcome-line {
+
+    width: 70px;
+
+    height: 4px;
+
+    background: var(--red);
+
+    margin: 30px 0 15px;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.welcome-section small {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--yellow);
+
+}
+
+
+/* =========================
+   LOGIN SECTION
+========================= */
+
+.login-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    background: var(--cream-white);
+
+}
+
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 390px;
+
+}
+
+
+.login-box h2 {
+
+    font-size: 30px;
+
+    color: var(--green);
+
+    margin-bottom: 8px;
+
+}
+
+
+.login-subtitle {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.input-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+.input-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: var(--grey);
+
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    background: white;
+
+    transition: 0.3s ease;
+
+}
+
+
+.input-group input:focus {
+
+    border-color: var(--green);
+
+    box-shadow: 0 0 0 3px rgba(0, 115, 48, 0.08);
+
+}
+
+
+/* =========================
+   PASSWORD LABEL
+========================= */
+
+.password-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.password-label a {
+
+    color: var(--red);
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+}
+
+
+.password-label a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================
+   REMEMBER ME
+========================= */
+
+.remember-me {
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.remember-me input {
+
+    accent-color: var(--green);
+
+    margin-right: 5px;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+button:hover {
+
+    background: #005c27;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 115, 48, 0.2);
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+#message {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   REGISTER
+========================= */
+
+.register-text {
+
+    text-align: center;
+
+    font-size: 13px;
+
+    margin-top: 25px;
+
+    color: #777;
+
+}
+
+
+.register-text a {
+
+    color: var(--red);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 800px) {
+
+    .container {
+
+        grid-template-columns: 1fr;
+
+        margin: 30px 0;
+
+    }
+
+
+    .welcome-section {
+
+        min-height: 400px;
+
+        padding: 40px;
+
+    }
+
+
+    .welcome-section h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .logo {
+
+        left: 40px;
+
+    }
+
+
+    .login-section {
+
+        padding: 50px 30px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    body {
+
+        align-items: flex-start;
+
+    }
+
+
+    .container {
+
+        width: 100%;
+
+        border-radius: 0;
+
+        margin: 0;
+
+    }
+
+
+    .welcome-section {
+
+        padding: 35px 25px;
+
+    }
+
+
+    .logo {
+
+        left: 25px;
+
+    }
+
+}

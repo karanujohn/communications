@@ -1,0 +1,367 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #FFFFFF;
+
+    color: #202020;
+
+}
+
+
+/* =========================
+   STUDY SECTION
+========================= */
+
+.study-section {
+
+    min-height: 100vh;
+
+    padding: 80px 7%;
+
+    background-color: #FFFFFF;
+
+}
+
+
+/* =========================
+   STUDY HEADER
+========================= */
+
+.study-header {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+
+}
+
+.study-header p {
+
+    color: #E00712;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+.study-header h1 {
+
+    margin: -150px auto 0;
+
+    font-size: 42px;
+
+    color: #007330;
+
+}
+
+.study-header span {
+
+    color: #555555;
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-container {
+
+    max-width: 600px;
+
+    margin: 0px auto 40px;
+
+}
+
+.search-container input {
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: 2px solid #E00712;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+}
+
+.search-container input:focus {
+
+    border-color: #007330;
+
+}
+
+
+/* =========================
+   DOCUMENT CONTAINER
+========================= */
+
+.document-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =========================
+   DOCUMENT CARD
+========================= */
+
+.document-card {
+
+    padding: 30px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 10px;
+
+    border-top: 6px solid #E00712;
+
+    box-shadow: 0 5px 18px rgba(224, 7, 18, 0.15);
+
+    transition: 0.3s;
+
+}
+
+.document-card:hover {
+
+    transform: translateY(-8px);
+
+    border-top-color: #007330;
+
+}
+
+.document-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+.document-content h2 {
+
+    color: #007330;
+
+    margin-bottom: 10px;
+
+}
+
+.document-content p {
+
+    color: #555555;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   VIEW BUTTON
+========================= */
+
+.view-button {
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #E00712;
+
+    color: #FFFFFF;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.view-button:hover {
+
+    background-color: #007330;
+
+}
+
+
+/* =========================
+   DOCUMENT MODAL
+========================= */
+
+.document-modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 1000;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    padding: 30px;
+
+}
+
+
+/* =========================
+   MODAL CONTENT
+========================= */
+
+.modal-content {
+
+    width: 95%;
+
+    height: 95%;
+
+    margin: auto;
+
+    background-color: #FFFFFF;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================
+   MODAL HEADER
+========================= */
+
+.modal-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 25px;
+
+    background-color: #E00712;
+
+    color: #FFFFFF;
+
+}
+
+.modal-header h2 {
+
+    font-size: 20px;
+
+}
+
+.close-button {
+
+    background: none;
+
+    border: none;
+
+    color: #FFFFFF;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   DOCUMENT FRAME
+========================= */
+
+#documentFrame {
+
+    width: 100%;
+
+    height: calc(100% - 65px);
+
+    border: none;
+
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .document-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .study-section {
+
+        padding: 50px 5%;
+
+    }
+
+    .study-header h1 {
+
+        font-size: 32px;
+
+    }
+
+    .document-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .document-modal {
+
+        padding: 10px;
+
+    }
+
+    .modal-content {
+
+        width: 100%;
+
+        height: 95%;
+
+    }
+
+}
